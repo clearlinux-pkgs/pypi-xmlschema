@@ -1,5 +1,5 @@
 PKG_NAME := xmlschema
-URL = https://files.pythonhosted.org/packages/e5/f7/2edf59659525cf300f2e3e41e4278907a75db2c4ff50bdd9bc77f12e56a5/xmlschema-1.7.1.tar.gz
+URL = https://files.pythonhosted.org/packages/ae/5a/0fdec22c660c78524fa351ed17b45cbac13aa3abe880a44cd5d03c05ec18/xmlschema-1.8.1.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
