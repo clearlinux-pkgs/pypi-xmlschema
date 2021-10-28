@@ -4,7 +4,7 @@
 #
 Name     : xmlschema
 Version  : 1.8.1
-Release  : 3
+Release  : 4
 URL      : https://files.pythonhosted.org/packages/ae/5a/0fdec22c660c78524fa351ed17b45cbac13aa3abe880a44cd5d03c05ec18/xmlschema-1.8.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/ae/5a/0fdec22c660c78524fa351ed17b45cbac13aa3abe880a44cd5d03c05ec18/xmlschema-1.8.1.tar.gz
 Summary  : An XML Schema validator and decoder
