@@ -4,7 +4,7 @@
 #
 Name     : xmlschema
 Version  : 1.9.2
-Release  : 11
+Release  : 12
 URL      : https://files.pythonhosted.org/packages/49/6e/abc3be7ab1deb38dcb5721b58fd9ab2451ace530a1d247c49b675efa90fc/xmlschema-1.9.2.tar.gz
 Source0  : https://files.pythonhosted.org/packages/49/6e/abc3be7ab1deb38dcb5721b58fd9ab2451ace530a1d247c49b675efa90fc/xmlschema-1.9.2.tar.gz
 Summary  : An XML Schema validator and decoder
@@ -88,7 +88,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1640282541
+export SOURCE_DATE_EPOCH=1641417245
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
