@@ -4,7 +4,7 @@
 #
 Name     : pypi-xmlschema
 Version  : 1.10.0
-Release  : 14
+Release  : 15
 URL      : https://files.pythonhosted.org/packages/ba/fb/a2f48ad01aaf2692d34f4ad897daeace97dfac1c4ec2bcb110ab1417ac80/xmlschema-1.10.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/ba/fb/a2f48ad01aaf2692d34f4ad897daeace97dfac1c4ec2bcb110ab1417ac80/xmlschema-1.10.0.tar.gz
 Summary  : An XML Schema validator and decoder
@@ -86,7 +86,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1646665731
+export SOURCE_DATE_EPOCH=1649796925
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
