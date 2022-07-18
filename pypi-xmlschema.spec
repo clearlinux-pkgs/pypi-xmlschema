@@ -4,7 +4,7 @@
 #
 Name     : pypi-xmlschema
 Version  : 1.11.3
-Release  : 21
+Release  : 22
 URL      : https://files.pythonhosted.org/packages/8d/fd/8a1636b8bb59eb25cffa916093db06dda5f16aef94a4da666745312d7d02/xmlschema-1.11.3.tar.gz
 Source0  : https://files.pythonhosted.org/packages/8d/fd/8a1636b8bb59eb25cffa916093db06dda5f16aef94a4da666745312d7d02/xmlschema-1.11.3.tar.gz
 Summary  : An XML Schema validator and decoder
@@ -89,7 +89,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1656098572
+export SOURCE_DATE_EPOCH=1658153254
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -99,6 +99,7 @@ export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto "
 export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto "
 export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=auto "
 export MAKEFLAGS=%{?_smp_mflags}
+pypi-dep-fix.py . elementpath
 python3 setup.py build
 
 pushd ../buildavx2/
@@ -107,6 +108,7 @@ export CXXFLAGS="$CXXFLAGS -m64 -march=x86-64-v3 -Wl,-z,x86-64-v3 "
 export FFLAGS="$FFLAGS -m64 -march=x86-64-v3 -Wl,-z,x86-64-v3 "
 export FCFLAGS="$FCFLAGS -m64 -march=x86-64-v3 "
 export LDFLAGS="$LDFLAGS -m64 -march=x86-64-v3 "
+pypi-dep-fix.py . elementpath
 python3 setup.py build
 
 popd
@@ -116,6 +118,7 @@ rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/pypi-xmlschema
 cp %{_builddir}/xmlschema-1.11.3/LICENSE %{buildroot}/usr/share/package-licenses/pypi-xmlschema/7507376d580cb5b5c2ff25e049bf82420bf2ca56
 python3 -tt setup.py build  install --root=%{buildroot}
+pypi-dep-fix.py %{buildroot} elementpath
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
 echo ----[ mark ]----
