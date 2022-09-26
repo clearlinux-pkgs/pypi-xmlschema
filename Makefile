@@ -1,5 +1,5 @@
 PKG_NAME := pypi-xmlschema
-URL = https://files.pythonhosted.org/packages/e1/7f/66106286937710b298c9f2aab33a97327c786f3e8a8baa21abc68c3b173a/xmlschema-2.0.4.tar.gz
+URL = https://files.pythonhosted.org/packages/27/08/46dc111a9737a3c210f6bf5cf5af88ff9396033f58c031d6ba7c942ea1e3/xmlschema-2.1.0.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
