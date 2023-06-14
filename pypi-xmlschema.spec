@@ -4,10 +4,10 @@
 # Using build pattern: distutils3
 #
 Name     : pypi-xmlschema
-Version  : 2.3.0
-Release  : 40
-URL      : https://files.pythonhosted.org/packages/e8/ba/cc4d4d1f226286459cadb336cd48025872856021af726a8ca12b372f3efc/xmlschema-2.3.0.tar.gz
-Source0  : https://files.pythonhosted.org/packages/e8/ba/cc4d4d1f226286459cadb336cd48025872856021af726a8ca12b372f3efc/xmlschema-2.3.0.tar.gz
+Version  : 2.3.1
+Release  : 41
+URL      : https://files.pythonhosted.org/packages/d9/ed/135f08d89431805a82806d22d2331eaff833c1157756a5752f54b6ffabfb/xmlschema-2.3.1.tar.gz
+Source0  : https://files.pythonhosted.org/packages/d9/ed/135f08d89431805a82806d22d2331eaff833c1157756a5752f54b6ffabfb/xmlschema-2.3.1.tar.gz
 Summary  : An XML Schema validator and decoder
 Group    : Development/Tools
 License  : MIT
@@ -16,6 +16,7 @@ Requires: pypi-xmlschema-license = %{version}-%{release}
 Requires: pypi-xmlschema-python = %{version}-%{release}
 Requires: pypi-xmlschema-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
+BuildRequires : pypi(elementpath)
 BuildRequires : pypi(py)
 BuildRequires : pypi-pluggy
 BuildRequires : pypi-pytest
@@ -79,10 +80,10 @@ python3 components for the pypi-xmlschema package.
 
 
 %prep
-%setup -q -n xmlschema-2.3.0
-cd %{_builddir}/xmlschema-2.3.0
+%setup -q -n xmlschema-2.3.1
+cd %{_builddir}/xmlschema-2.3.1
 pushd ..
-cp -a xmlschema-2.3.0 buildavx2
+cp -a xmlschema-2.3.1 buildavx2
 popd
 
 %build
@@ -90,7 +91,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1684612674
+export SOURCE_DATE_EPOCH=1686755604
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
