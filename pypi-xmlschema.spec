@@ -5,7 +5,7 @@
 #
 Name     : pypi-xmlschema
 Version  : 2.5.0
-Release  : 43
+Release  : 44
 URL      : https://files.pythonhosted.org/packages/2a/cb/f56f7fe7794adc659c515c86303814bd97b6f1a3ca692fb3663b1199d959/xmlschema-2.5.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/2a/cb/f56f7fe7794adc659c515c86303814bd97b6f1a3ca692fb3663b1199d959/xmlschema-2.5.0.tar.gz
 Summary  : An XML Schema validator and decoder
