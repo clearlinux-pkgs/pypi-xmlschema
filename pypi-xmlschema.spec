@@ -6,14 +6,15 @@
 # autospec commit: ab27b0e
 #
 Name     : pypi-xmlschema
-Version  : 3.0.0
-Release  : 47
-URL      : https://files.pythonhosted.org/packages/50/88/7f12480807e9293774f5addd5cdf81610d0d5e00684b7ea7fdac3bbfec9a/xmlschema-3.0.0.tar.gz
-Source0  : https://files.pythonhosted.org/packages/50/88/7f12480807e9293774f5addd5cdf81610d0d5e00684b7ea7fdac3bbfec9a/xmlschema-3.0.0.tar.gz
+Version  : 3.0.1
+Release  : 48
+URL      : https://files.pythonhosted.org/packages/ee/cd/c99399638bf1faf61be7c74742d74aab4e7c1100e49c0e422cd48655c70b/xmlschema-3.0.1.tar.gz
+Source0  : https://files.pythonhosted.org/packages/ee/cd/c99399638bf1faf61be7c74742d74aab4e7c1100e49c0e422cd48655c70b/xmlschema-3.0.1.tar.gz
 Summary  : An XML Schema validator and decoder
 Group    : Development/Tools
 License  : MIT
 Requires: pypi-xmlschema-bin = %{version}-%{release}
+Requires: pypi-xmlschema-license = %{version}-%{release}
 Requires: pypi-xmlschema-python = %{version}-%{release}
 Requires: pypi-xmlschema-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
@@ -46,9 +47,18 @@ xmlschema
 %package bin
 Summary: bin components for the pypi-xmlschema package.
 Group: Binaries
+Requires: pypi-xmlschema-license = %{version}-%{release}
 
 %description bin
 bin components for the pypi-xmlschema package.
+
+
+%package license
+Summary: license components for the pypi-xmlschema package.
+Group: Default
+
+%description license
+license components for the pypi-xmlschema package.
 
 
 %package python
@@ -72,10 +82,10 @@ python3 components for the pypi-xmlschema package.
 
 
 %prep
-%setup -q -n xmlschema-3.0.0
-cd %{_builddir}/xmlschema-3.0.0
+%setup -q -n xmlschema-3.0.1
+cd %{_builddir}/xmlschema-3.0.1
 pushd ..
-cp -a xmlschema-3.0.0 buildavx2
+cp -a xmlschema-3.0.1 buildavx2
 popd
 
 %build
@@ -83,7 +93,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1704730133
+export SOURCE_DATE_EPOCH=1704838273
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -129,6 +139,8 @@ ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
+mkdir -p %{buildroot}/usr/share/package-licenses/pypi-xmlschema
+cp %{_builddir}/xmlschema-%{version}/LICENSE %{buildroot}/usr/share/package-licenses/pypi-xmlschema/2daaf71cd8ac37f4a9ea4b5003a1d43a56aef9be || :
 python3 -m installer --destdir=%{buildroot} dist/*.whl
 pypi-dep-fix.py %{buildroot} elementpath
 echo ----[ mark ]----
@@ -152,6 +164,10 @@ popd
 /usr/bin/xmlschema-json2xml
 /usr/bin/xmlschema-validate
 /usr/bin/xmlschema-xml2json
+
+%files license
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/pypi-xmlschema/2daaf71cd8ac37f4a9ea4b5003a1d43a56aef9be
 
 %files python
 %defattr(-,root,root,-)
