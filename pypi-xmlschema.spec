@@ -6,10 +6,10 @@
 # autospec commit: f35655a
 #
 Name     : pypi-xmlschema
-Version  : 3.4.1
-Release  : 57
-URL      : https://files.pythonhosted.org/packages/83/78/b9a61cd16c11cac6dbdd4ccc0f27a95a3b17ff0b69a8f078f984472622a5/xmlschema-3.4.1.tar.gz
-Source0  : https://files.pythonhosted.org/packages/83/78/b9a61cd16c11cac6dbdd4ccc0f27a95a3b17ff0b69a8f078f984472622a5/xmlschema-3.4.1.tar.gz
+Version  : 3.4.2
+Release  : 58
+URL      : https://files.pythonhosted.org/packages/4d/1e/416e1374ce060a932e5fc5c653cc5c769e1a978489bff7fac60a02be1ae8/xmlschema-3.4.2.tar.gz
+Source0  : https://files.pythonhosted.org/packages/4d/1e/416e1374ce060a932e5fc5c653cc5c769e1a978489bff7fac60a02be1ae8/xmlschema-3.4.2.tar.gz
 Summary  : An XML Schema validator and decoder
 Group    : Development/Tools
 License  : MIT
@@ -82,10 +82,10 @@ python3 components for the pypi-xmlschema package.
 
 
 %prep
-%setup -q -n xmlschema-3.4.1
-cd %{_builddir}/xmlschema-3.4.1
+%setup -q -n xmlschema-3.4.2
+cd %{_builddir}/xmlschema-3.4.2
 pushd ..
-cp -a xmlschema-3.4.1 buildavx2
+cp -a xmlschema-3.4.2 buildavx2
 popd
 
 %build
@@ -93,7 +93,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1726150106
+export SOURCE_DATE_EPOCH=1726670901
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
