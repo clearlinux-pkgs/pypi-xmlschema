@@ -7,7 +7,7 @@
 #
 Name     : pypi-xmlschema
 Version  : 3.4.2
-Release  : 58
+Release  : 59
 URL      : https://files.pythonhosted.org/packages/4d/1e/416e1374ce060a932e5fc5c653cc5c769e1a978489bff7fac60a02be1ae8/xmlschema-3.4.2.tar.gz
 Source0  : https://files.pythonhosted.org/packages/4d/1e/416e1374ce060a932e5fc5c653cc5c769e1a978489bff7fac60a02be1ae8/xmlschema-3.4.2.tar.gz
 Summary  : An XML Schema validator and decoder
